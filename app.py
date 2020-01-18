@@ -1,4 +1,5 @@
 import os
+import socket
 from flask import Flask
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ def main():
 
 @app.route('/how are you')
 def hello():
-    return 'I am good, how about you?'
+    return socket.gethostname()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
