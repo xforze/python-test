@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return "socket.gethostname()
+    return socket.gethostname()
 
 @app.route('/how are you')
 def hello():
